@@ -1,0 +1,68 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "dev": "NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "NODE_ENV=production webpack",
+    "lint-style": "sass-lint -c .sass-lint.yml 'src/**/*.scss' -v",
+    "precommit": "npm run lint-style",
+    "prepush": "npm run lint-style && npm run test"
+  },
+  "keywords": [],
+  "author": "Mohamed Ismail <ismailreality1@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "autoprefixer": "^9.1.3",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^7.1.5",
+    "babel-preset-airbnb": "^2.5.3",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.1.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
+    "jest": "^23.5.0",
+    "jest-fetch-mock": "^1.6.5",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass-chokidar": "^1.3.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "sass-lint": "^1.12.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-shell-plugin": "^0.5.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "testPathIgnorePatterns": [
+      "src/js/__tests__/helpers/testMockData.js",
+      "src/js/helpers/pagination.js"
+    ],
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ]
+  }
+}

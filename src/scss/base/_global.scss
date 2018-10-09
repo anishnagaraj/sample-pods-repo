@@ -1,0 +1,38 @@
+html {
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $primary-bg;
+  color: $primary-text;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
+
+.container {
+  flex: 1;
+  margin: 0 auto;
+  width: 1280px;
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+
+

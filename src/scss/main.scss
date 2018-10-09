@@ -1,0 +1,16 @@
+// Theming
+@import 'theme/color';
+
+// Reset and base
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'base/global';
+
+
+// Components
+@import 'components/loader';
+
+@import 'components/header';
+@import 'components/jenkins';
+@import 'components/footer';

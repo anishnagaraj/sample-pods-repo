@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Jenkins &middot; Assignment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <section class="app">
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">
+          <a href="#" class="logo__link">Jenkins</a>
+        </h1>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="loader-wrap" id="loader">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+      </div>
+      <div class="container hide" id="mainContainer">
+        <section class="jenkins">
+          <div class="row" id="content-container">
+          </div>
+          <div class="table-container">
+            <table class="centered highlight responsive-table">
+              <thead>
+                <tr>
+                  <th>Service Name </th>
+                  <th>Version</th>
+                  <th>Jobs Count</th>
+                  <th>k8s Namespace</th>
+                  <th>Running Pods Count</th>
+                  <th>Failed Pods Count</th>
+                </tr>
+              </thead>
+              <tbody id="tableBodyContainer">
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright__text">&copy; Copyright &middot; All rights reserved</p>
+      </div>
+    </footer>
+  </section>
+</body>
+
+</html>
